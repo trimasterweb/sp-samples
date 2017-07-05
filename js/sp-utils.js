@@ -1,7 +1,7 @@
 var SPUtils = {
   parseSearchResults: function(data){
     	var mapCells = function(item){
-        item.Cells.results.reduce(function(retorno, current, index, array){
+        return item.Cells.results.reduce(function(retorno, current, index, array){
           retorno[index] = current.Key
           current.Value = current.Value  || ''
           current.Value = current.Value.replace('string;#', '');
