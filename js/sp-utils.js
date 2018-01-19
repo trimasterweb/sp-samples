@@ -10,5 +10,11 @@ var SPUtils = {
         }, {})
       }
       return data.d.query.PrimaryQueryResult.RelevantResults.Table.Rows.results.map(mapCells);      
+    },
+    setPeoplePicker: function(fieldTitle, value){
+      $(document).ready(function(){
+        $('div[title*="'+fieldTitle+'"][ID*="UserField_upLevelDiv"]').text(value).change()
+        $('div[title*="'+fieldTitle+'"] [ID*="UserField_checkNames"]').click()
+      })	
     }
 }
